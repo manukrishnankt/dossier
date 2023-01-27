@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Wizard Management</title>
+        
+    <!-- Bootstrap CSS -->  
+  
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+           <link rel="stylesheet" href="/assets/css/style.css"> 
+    </head>
+    <body class="bg-white">
+        <div class="row">
+            <div class="signup-top pad-l-30">
+                <div class="wizard-container top-bar-contnr">
+            <div class="signup-logo">
+            <img src="/assets/images/logo.svg" alt="logo" title="logo"/>
+            </div>
+            <nav  class="topmenu-ul">
+              <label class="toggle">
+                  <i class="fa fa-bars"></i>
+              </label>
+              
+              <ul>
+                <label class="toggle menu-close-btn">
+                  <i class="icon-modal-close f-15"></i>
+              </label>
+                  <li><a  href='#'>
+                   <i class="icon-new-lf-mydashboard top-menu-icon"></i> 
+                    My Dashboard</a></li>
+                  <li><a href='#'>
+                    <i class="icon-dashboard-visa top-menu-icon"></i> 
+                    Category Management</a></li>
+                  <li ><a href='#'  >
+                    <i class="icon-calndr-top-menu top-menu-icon"></i>
+                    Manage Appointments</a></li>
+                  <li><a href='#'>
+                    <i class="icon-menusearch-top-menu top-menu-icon"></i>
+                    Dossier Search</a></li> 
+            
+                    <div class='top-social-log-toogle  '>
+                      <div class="dash-log-icon "> <img src="/assets/images/user-login.svg" alt="logo" title="logo"/> </div>
+                      <div class="dash-log-txt"> Fiso Mathew
+                        <div>Visa Officer </div>
+                      </div>
+                  </div>
+              </ul>
+              
+              <div class="socialtop">
+                  <div class='top-social'>
+                      
+                      <a href='#'><i class='icon-dashboard-upport top-menu-icon'></i></a> 
+                      <a href="#"><i class='icon-new-lf-help top-menu-icon'></i></a>
+                  </div>
+                  <div class='top-social-log '>
+                    <div class="dash-log-icon "> <img src="/assets/images/user-login.svg" alt="logo" title="logo"/> </div>
+                    <div class="dash-log-txt"> Fiso Mathew
+                      <div>Visa Officer </div>
+                    </div>
+                </div>
+              </div>
+            </nav>
+               </div>
+                </div>
+
+
+</div>
+
+<div class="row wizard-top-main-outer appointment-management-outer">
+<div class="wizard-container">
+<div class="col-md-12 top-main-head-outer">
+    <div class="wizard-main-head">Appointment Management</div>
+    
+    <div class="row appointment-management-search">
+        <div class="left">
+<div class="form-group search-outer">
+    <span class="fa fa-search form-control-feedback"></span>
+    <input type="text" class="form-control" placeholder="Search Unique cust ID, name, email, DOB, passport no. or DS160/DS260 no.  ">
+  </div>
+</div>
+<div class="right">
+    <a href="" class="add-step-button"><span class="icon-export-icon"></span>Export</a>
+
+    <a href="" class="add-step-button"><span class="icon-upload-icon"></span>UPLOAD</a>
+
+</div>
+    </div>
+
+    <div class="row appointment-management-search">
+        <div class="left">
+            <div class="wizard-main-head">Appointment Details</div>
+</div>
+<div class="right">
+<div class="appointment-manage-top-right-gird">
+    <div class="form-group ">
+          <select class="my-select selectpicker" data-container="body">
+            <option>Select Visa Class</option>
+          </select>
+        </div>    
+        <div class="form-group ">
+            <select class="my-select selectpicker" data-container="body">
+              <option>Select Visa Type</option>
+            </select>
+          </div>  
+        <div class="form-group select-slot-intervel-input add-visa-fees">
+            <div class="select-slot-clock-right ">
+                <img src="/assets/images/date-calander.svg">
+            </div>
+               <input type="text" class="form-control" placeholder="Select Date ">
+             </div>
+     
+
+</div>
+
+</div>
+    </div>
+
+    <div class="row">
+        <div class=" appointment-table">
+            <table class="table">
+                <thead>
+                  <tr class="">
+                
+                    <th class="col-md-1 width-5">    <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+                      <label for="styled-checkbox-1"> </label></th>
+                      <th class="col-md-2 width-10"> UCID</th>
+                    <th class="col-md-3 width-15"> Full Name </th>
+                    <th class="col-md-3 width-15">Email</th> 
+                    <th class="col-md-2 width-10">Passport No. </th>
+                    <th class="col-md-2 width-10"> Date of Birth </th>
+                    <th class="col-md-2 width-10">DS160/DS260 No.</th> 
+                    <th class="col-md-2 width-10">Appointment Date </th>
+                    <th class="col-md-1 width-5">No Show</th> 
+                    <th class="col-md-1 width-5"> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                      <td class="col-md-1 width-5">    <input class="styled-checkbox  " id="styled-checkbox-2" type="checkbox" value="value1">
+                          <label for="styled-checkbox-2"> </label></td>
+                          <td class="col-md-2 width-10"> 009710</td>
+                        <td class="col-md-3 width-15"> Kunal Narayan Sharma </td>
+                        <td class="col-md-3 width-15">kunal@gmail.com</td> 
+                        <td class="col-md-2 width-10">A2135647889</td>
+                        <td class="col-md-2 width-10"> 04/14/1982 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" checked>
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-1 width-5">    <input class="styled-checkbox  " id="styled-checkbox-3" type="checkbox" value="value1" >
+                          <label for="styled-checkbox-3"> </label></td>
+                          <td class="col-md-2 width-10">005436</td>
+                        <td class="col-md-3 width-15">Payal Kunal Sharma</td>
+                        <td class="col-md-3 width-15">payal@gmail.com</td> 
+                        <td class="col-md-2 width-10">10/22/1983</td>
+                        <td class="col-md-2 width-10"> US098765432 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" >
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                    <tr >
+                      <td class="col-md-1 width-5">    <input class="styled-checkbox " id="styled-checkbox-4" type="checkbox" value="value1" >
+                          <label for="styled-checkbox-4"> </label></td>
+                          <td class="col-md-2 width-10">004567</td>
+                        <td class="col-md-3 width-15">Rohit Kunal Sharma </td>
+                        <td class="col-md-3 width-15">rohit@gmail.com</td> 
+                        <td class="col-md-2 width-10">A8377388939</td>
+                        <td class="col-md-2 width-10">06/18/2011 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" checked >
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-1 width-5">    <input class="styled-checkbox" id="styled-checkbox-5" type="checkbox" value="value1" >
+                          <label for="styled-checkbox-5"> </label></td>
+                          <td class="col-md-2 width-10"> 009710</td>
+                        <td class="col-md-3 width-15"> Kunal Narayan Sharma </td>
+                        <td class="col-md-3 width-15">kunal@gmail.com</td> 
+                        <td class="col-md-2 width-10">A2135647889</td>
+                        <td class="col-md-2 width-10"> 04/14/1982 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" >
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-1 width-5">    <input class="styled-checkbox  " id="styled-checkbox-6" type="checkbox" value="value1" >
+                          <label for="styled-checkbox-6"> </label></td>
+                          <td class="col-md-2 width-10">005436</td>
+                        <td class="col-md-3 width-15">Payal Kunal Sharma</td>
+                        <td class="col-md-3 width-15">payal@gmail.com</td> 
+                        <td class="col-md-2 width-10">10/22/1983</td>
+                        <td class="col-md-2 width-10"> US098765432 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" checked>
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-1 width-5">    <input class="styled-checkbox  " id="styled-checkbox-7" type="checkbox" value="value1" >
+                          <label for="styled-checkbox-7"> </label></td>
+                          <td class="col-md-2 width-10">004567</td>
+                        <td class="col-md-3 width-15">Rohit Kunal Sharma </td>
+                        <td class="col-md-3 width-15">rohit@gmail.com</td>
+                        <td class="col-md-2 width-10">A8377388939</td>
+                        <td class="col-md-2 width-10">06/18/2011 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" >
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-1 width-5">    <input class="styled-checkbox " id="styled-checkbox-8" type="checkbox" value="value1" >
+                          <label for="styled-checkbox-8"> </label></td>
+                          <td class="col-md-2 width-10"> 009710</td>
+                        <td class="col-md-3 width-15"> Kunal Narayan Sharma </td>
+                        <td class="col-md-3 width-15">kunal@gmail.com</td> 
+                        <td class="col-md-2 width-10">A2135647889</td>
+                        <td class="col-md-2 width-10"> 04/14/1982 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" checked>
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-1 width-5">    <input class="styled-checkbox  " id="styled-checkbox-9" type="checkbox" value="value1" >
+                          <label for="styled-checkbox-9"> </label></td>
+                          <td class="col-md-2 width-10">005436</td>
+                        <td class="col-md-3 width-15">Payal Kunal Sharma</td>
+                        <td class="col-md-3 width-15">payal@gmail.com</td> 
+                        <td class="col-md-2 width-10">10/22/1983</td>
+                        <td class="col-md-2 width-10"> US098765432 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" checked>
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-1 width-5">    <input class="styled-checkbox  " id="styled-checkbox-10" type="checkbox" value="value1" >
+                          <label for="styled-checkbox-10"> </label></td>
+                          <td class="col-md-2 width-10">004567</td>
+                        <td class="col-md-3 width-15">Rohit Kunal Sharma </td>
+                        <td class="col-md-3 width-15">rohit@gmail.com</td> 
+                        <td class="col-md-2 width-10">A8377388939</td>
+                        <td class="col-md-2 width-10">06/18/2011 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" >
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-1 width-5">   
+                           <input class="styled-checkbox  " id="styled-checkbox-5" type="checkbox" value="value1" >
+                          <label for="styled-checkbox-5"> </label></td>
+                          <td class="col-md-2 width-10"> 009710</td>
+                        <td class="col-md-3 width-15"> Kunal Narayan Sharma </td>
+                        <td class="col-md-3 width-15">kunal@gmail.com</td> 
+                        <td class="col-md-2 width-10">A2135647889</td>
+                        <td class="col-md-2 width-10"> 04/14/1982 </td>
+                        <td class="col-md-2 width-10">US098765432</td> 
+                        <td class="col-md-2 width-10">04/14/1982 </td>
+                        <td class="col-md-1 width-5">
+                          <div class="toggle-button ">
+                              <input type="checkbox" checked>
+                          </div>  
+                        </td> 
+                        <td class="col-md-1 width-5"><div class="table-two-icon-new ">
+                          <a href="" class="icons-list icon-view-icon float-align-left table-icons"></a>
+                          <a href="" class="icons-list icon-flag-icon float-align-right table-icons flag-color"></a>
+                      </div> </td>
+                    </tr>
+                   
+                   
+                </tbody>
+              </table>
+
+        
+          </div>
+          <div class="row">
+            <div class="Pager2" aria-label="pagination example">
+                <div class="page-out-of">
+                    <div class="page-text">Page</div>
+                    <div class="form-group ">
+                        <select class="my-select selectpicker" data-container="body">
+                            <option>1</option>
+                            <option>2</option>
+                          </select>
+                        </div>
+<div class="of-text">of 10</div>
+                </div>
+                <ul class="pagination pagination-circle justify-content-center">
+            
+            
+                    <!--Arrow left-->
+                    <li class="page-item disabled">
+                        <a class="page-link" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next">
+                            <span class="icon-left-arrow"></span>
+                        </a>
+                    </li>
+            
+                    <!--Numbers-->
+                    <li class="page-item active"><a class="page-link">1</a></li>
+                    <li class="page-item"><a class="page-link">2</a></li>
+                    <li class="page-item"><a class="page-link">3</a></li>
+                    <li class="page-item"><a class="page-link page-blank-age">...</a></li>
+                    <li class="page-item"><a class="page-link">10</a></li>
+            
+                    <!--Arrow right-->
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next">
+                            <span class="icon-right-arrow-1"></span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+            
+
+            
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div></div>
+</div>
+
+  
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js'></script>
+    <script  src="js/topmenu.js"></script>
+       </body>
+</html>

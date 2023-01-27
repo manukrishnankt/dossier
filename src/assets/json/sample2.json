@@ -1,0 +1,11 @@
+{"condition":"and","rules":[{"fieldName":"A","operator":"EQUALS","fieldValue":"A","fieldType":"STRING"},{"condition":"and","rules":[{"fieldName":"B","operator":"EQUALS","fieldValue":"B","fieldType":"STRING"},{
+  "condition":"and",
+  "rules":[
+  {
+  "fieldName":"D",
+  "operator":"EQUALS",
+  "fieldValue":"D",
+  "fieldType":"STRING"
+  }
+  ]
+  }]},{"condition":"and","rules":[{"fieldName":"C","operator":"EQUALS","fieldValue":"C","fieldType":"STRING"}]}]}

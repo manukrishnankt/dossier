@@ -1,0 +1,187 @@
+{
+    "condition": "and",
+    "rules": [
+      {
+        "fieldName": "A",
+        "operator": "notequal",
+        "fieldValue": "gh",
+        "fieldType": ""
+      },
+      {
+        "fieldName": "B",
+        "operator": "equal",
+        "fieldValue": "oo",
+        "fieldType": ""
+      },
+      {
+        "condition": "and",
+        "rules": [
+          {
+            "fieldName": "C",
+            "operator": "equal",
+            "fieldValue": "bb",
+            "fieldType": ""
+          },
+          {
+            "fieldName": "D",
+            "operator": "equal",
+            "fieldValue": "nn",
+            "fieldType": ""
+          },
+          {
+            "condition": "or",
+            "rules": [
+              {
+                "fieldName": "E",
+                "operator": "equal",
+                "fieldValue": "g",
+                "fieldType": ""
+              },
+              {
+                "fieldName": "F",
+                "operator": "equal",
+                "fieldValue": "cc",
+                "fieldType": ""
+              },
+              {
+                "condition": "or",
+                "rules": [
+                  {
+                    "fieldName": "G",
+                    "operator": "equal",
+                    "fieldValue": "g",
+                    "fieldType": ""
+                  },
+                  {
+                    "fieldName": "H",
+                    "operator": "equal",
+                    "fieldValue": "cc",
+                    "fieldType": ""
+                  },
+                  {
+                    "condition": "or",
+                    "rules": [
+                      {
+                        "fieldName": "I",
+                        "operator": "equal",
+                        "fieldValue": "g",
+                        "fieldType": ""
+                      },
+                      {
+                        "fieldName": "J",
+                        "operator": "equal",
+                        "fieldValue": "cc",
+                        "fieldType": ""
+                      },
+                      {
+                        "condition": "or",
+                        "rules": [
+                          {
+                            "fieldName": "K",
+                            "operator": "equal",
+                            "fieldValue": "g",
+                            "fieldType": ""
+                          },
+                          {
+                            "fieldName": "L",
+                            "operator": "equal",
+                            "fieldValue": "cc",
+                            "fieldType": ""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "condition": "and",
+        "rules": [
+          {
+            "fieldName": "C",
+            "operator": "equal",
+            "fieldValue": "bb",
+            "fieldType": ""
+          },
+          {
+            "fieldName": "D",
+            "operator": "equal",
+            "fieldValue": "nn",
+            "fieldType": ""
+          },
+          {
+            "condition": "or",
+            "rules": [
+              {
+                "fieldName": "E",
+                "operator": "equal",
+                "fieldValue": "g",
+                "fieldType": ""
+              },
+              {
+                "fieldName": "F",
+                "operator": "equal",
+                "fieldValue": "cc",
+                "fieldType": ""
+              },
+              {
+                "condition": "or",
+                "rules": [
+                  {
+                    "fieldName": "G",
+                    "operator": "equal",
+                    "fieldValue": "g",
+                    "fieldType": ""
+                  },
+                  {
+                    "fieldName": "H",
+                    "operator": "equal",
+                    "fieldValue": "cc",
+                    "fieldType": ""
+                  },
+                  {
+                    "condition": "or",
+                    "rules": [
+                      {
+                        "fieldName": "I",
+                        "operator": "equal",
+                        "fieldValue": "g",
+                        "fieldType": ""
+                      },
+                      {
+                        "fieldName": "J",
+                        "operator": "equal",
+                        "fieldValue": "cc",
+                        "fieldType": ""
+                      },
+                      {
+                        "condition": "or",
+                        "rules": [
+                          {
+                            "fieldName": "K",
+                            "operator": "equal",
+                            "fieldValue": "g",
+                            "fieldType": ""
+                          },
+                          {
+                            "fieldName": "L",
+                            "operator": "equal",
+                            "fieldValue": "cc",
+                            "fieldType": ""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

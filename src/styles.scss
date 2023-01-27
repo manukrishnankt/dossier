@@ -1,0 +1,325 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./assets/css/fonts.css";
+@import "./assets/css/sass-files/variables.scss";
+
+@import "./assets/css/sass-files/signup.scss";
+@import "./assets/css/sass-files/newstyle.scss";
+@import "./assets/css/sass-files/dashboard-sidebar.scss";
+@import "./assets/css/sass-files/lookup.scss";
+@import "./assets/css/sass-files/user-dash.scss";
+@import "./assets/css/sass-files/my-application.scss";
+@import "./assets/css/sass-files/top-menu.scss";
+@import "./assets/css/sass-files/calander-mangmnt.scss";
+@import "./assets/css/style.css";
+@import "./assets/css/sass-files/approval-group-info.scss";
+@import "./assets/css/sass-files/user-manage.scss";
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  width: 100%;
+}
+.signup-logo mat-icon {
+  height: 48px !important;
+}
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.cal-month-view .cal-event {
+  width: 100%;
+  height: 10px;
+  border-radius: 0%;
+  display: inline-block;
+  margin: 2px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.dropdown-dev {
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    height: 35px;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 3px 2px 0;
+  }
+  .mat-select-arrow-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    width: 8px;
+    height: 1.5px;
+    background: #555;
+    z-index: 99;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: 0;
+  }
+  .mat-select-arrow-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 4px;
+    width: 8px;
+    height: 1.5px;
+    background: #555;
+    z-index: 99;
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: 0;
+  }
+  .mat-select-arrow {
+    display: none;
+  }
+  .mat-select-0-panel .mat-select-arrow-wrapper::after {
+    right: 18px;
+  }
+  .mat-select-0-panel .mat-select-arrow-wrapper::before {
+    right: 13px;
+  }
+  .drop-down-panelcls {
+    margin-top: 32px !important;
+  }
+  .mat-select-value {
+    float: left;
+    .mat-select-arrow-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: 4px;
+      width: 8px;
+      height: 1.5px;
+      background: #555;
+      z-index: 99;
+      -webkit-transform: rotate(-40deg);
+      transform: rotate(-40deg);
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      border: 0;
+    }
+
+    .mat-select-arrow {
+      display: none;
+    }
+
+    .mat-select-0-panel .mat-select-arrow-wrapper::after {
+      right: 18px;
+    }
+
+    .mat-select-0-panel .mat-select-arrow-wrapper::before {
+      right: 13px;
+    }
+
+    .drop-down-panelcls {
+      margin-top: 32px !important;
+    }
+
+    .mat-select-value {
+      float: left;
+
+      margin-top: -15px;
+    }
+  }
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  border: 0;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border: 0.5px solid #7b8eb0;
+}
+.mat-focused .mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-focused .mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border: 0.5px solid #7b8eb0;
+}
+.mat-form-field {
+  width: 100%;
+  float: left;
+}
+.mat-form-field {
+  width: 100%;
+
+  float: left;
+}
+
+.mat-form-field-flex {
+  width: 100%;
+}
+
+.mat-form-field-infix {
+  width: 100% !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border: 0.5px solid #7b8eb0 !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0 !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0 !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-start {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  display: none;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-radius: 5px !important;
+}
+.mandatory-txt {
+  color: red;
+}
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 10000 !important;
+}
+.mandatory-txt {
+  top: 5px;
+  color: #ff5050;
+}
+// position: relative;
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container,
+.cdk-overlay-connected-position-bounding-box {
+  z-index: 10000 !important;
+}
+.next-btn span.mat-button-wrapper {
+  color: #fff !important;
+}
+
+.modal {
+  --bs-modal-width: 50%;
+}
+.svg-md {
+  height: 48px;
+}
+.txt-bold-white .mat-simple-snack-bar-content {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+@import "./assets/css/sass-files/common-main-style.scss";
+@import "./assets/css/sass-files/super-admin-wizard-management";
+@import "./assets/css/sass-files/mission-tabs.scss";
+@import "./assets/css/sass-files/manage-appointments.scss";
+@import "./assets/css/sass-files/mac-book-applicatio.scss";
+@import "./assets/css/sass-files/dossier-search.scss";
+@import "./assets/style/custom-style.scss";
+
+.lookup-dots-box {
+  cursor: pointer !important;
+}
+.form-group input.ng-invalid:not(form) {
+  border: 2px solid #a94442; /* red */
+}
+.form-group mat-form-field.ng-invalid:not(form) .mat-form-field-outline-end {
+  border: 2px solid #a94442 !important; /* red */
+  border-radius: 5px !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+mwl-calendar-event-title {
+  width: 100%;
+
+  span.cal-event-title {
+    font-weight: 500;
+
+    text-align: center;
+
+    display: block;
+  }
+}
+
+.ngx-spinner-overlay {
+  opacity: 0.8 !important;
+}
+.cursor-pointer-hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Custom Theming for Angular Material
+// // For more information: https://material.angular.io/guide/theming
+// @use '@angular/material' as mat;
+// // Plus imports for other components in your app.
+
+// // Include the common styles for Angular Material. We include this here so that you only
+// // have to load a single css file for Angular Material in your app.
+// // Be sure that you only ever include this mixin once!
+// @include mat.core();
+
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $visa-greeter-ui-primary: mat.define-palette(mat.$indigo-palette);
+// $visa-greeter-ui-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// // The warn palette is optional (defaults to red).
+// $visa-greeter-ui-warn: mat.define-palette(mat.$red-palette);
+
+// // Create the theme object. A theme consists of configurations for individual
+// // theming systems such as "color" or "typography".
+// $visa-greeter-ui-theme: mat.define-light-theme((
+//   color: (
+//     primary: $visa-greeter-ui-primary,
+//     accent: $visa-greeter-ui-accent,
+//     warn: $visa-greeter-ui-warn,
+//   )
+// ));
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include mat.all-component-themes($visa-greeter-ui-theme);
+
+// /* You can add global styles to this file, and also import other style files */
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
