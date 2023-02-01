@@ -1,0 +1,280 @@
+<div class="row custom-row wizard-top-main-outer appointment-management-outer">
+  <div class="wizard-container">
+    <div class="col-md-12 top-main-head-outer">
+      <div class="wizard-main-head">Appointment Management</div>
+      <form [formGroup]="appointmentForm">
+        <div class="row custom-row appointment-management-search">
+          <div class="left">
+            <div class="form-group search-outer">
+              <span class="fa fa-search form-control-feedback"></span>
+              <form novalidate #form="ngForm">
+                <input type="text" class="form-control" [(ngModel)]="inputtext" name="inputtext"
+                  placeholder="Search Unique cust ID, name, email, DOB, passport no. or DS160/DS260 no.  " />
+              </form>
+            </div>
+          </div>
+          <div class="right">
+            <a class="add-step-button" href="javascript:;" (click)="exportExcel()"><span
+                class="icon-export-icon"></span>Export</a>
+
+            <a class="add-step-button" href="javascript:;" data-toggle="modal" data-target="#mymodal"
+              (click)="openpopup()"><span class="icon-upload-icon"></span>UPLOAD</a>
+          </div>
+        </div>
+
+        <div class="row custom-row appointment-management-search">
+          <div class="left">
+            <div class="wizard-main-head">Appointment Details</div>
+          </div>
+          <div class="right">
+            <div class="appointment-manage-top-right-gird">
+              <div class="form-group dropdown-dev">
+                <!-- <label>Select Mission</label> -->
+                <mat-form-field appearance="outline" floatLabel="never">
+                  <mat-select panelClass="drop-down-panelcls" (selectionChange)="getVisaCat($event)"
+                    formControlName="visaType" placeholder="Select Visa Type">
+                    <mat-option [value]="''"></mat-option>
+                    <mat-option *ngFor="let class of visaTypeList" [value]="class.lookUpCdtCode">{{ class.lookUpCdtCode
+                      }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <!-- <div class="return-error-txt-msg m-b-20 error-msg-ftr-txt-margin-top:10px"
+                *ngIf="formDir.submitted && createOfcForm.controls['missionId'].errors?.['required']">
+                Mission is Required
+              </div> -->
+              </div>
+              <div class="form-group dropdown-dev">
+                <mat-form-field appearance="outline" floatLabel="never">
+                  <mat-select panelClass="drop-down-panelcls" formControlName="visaCat"
+                    placeholder="Select Visa Category" (selectionChange)="getVisaClass($event)">
+                    <mat-option [value]="''"></mat-option>
+                    <mat-option *ngFor="let type of visaCatList" [value]="type.lookUpCdtCode">{{ type.lookUpCdtCode
+                      }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <!-- <div class="return-error-txt-msg m-b-20 error-msg-ftr-txt-margin-top:10px"
+                *ngIf="formDir.submitted && createOfcForm.controls['missionId'].errors?.['required']">
+                Mission is Required
+              </div> -->
+              </div>
+              <div class="form-group dropdown-dev">
+                <mat-form-field appearance="outline" floatLabel="never">
+                  <mat-select panelClass="drop-down-panelcls" formControlName="visaClass"
+                    placeholder="Select Visa Class">
+                    <mat-option [value]="''"></mat-option>
+                    <mat-option *ngFor="let type of visaClassList" [value]="type.lookUpCdtCode">{{ type.lookUpCdtCode
+                      }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <!-- <div class="return-error-txt-msg m-b-20 error-msg-ftr-txt-margin-top:10px"
+                *ngIf="formDir.submitted && createOfcForm.controls['missionId'].errors?.['required']">
+                Mission is Required
+              </div> -->
+              </div>
+              <div class="form-group select-slot-intervel-input add-visa-fees">
+                <input type="date" class="form-control" placeholder="Select Date" formControlName="currentDate"
+                  (change)="getAllNoShowByDate()" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="row custom-row">
+        <div class="appointment-table">
+          <table class="table">
+            <thead>
+              <tr class="">
+                <!-- <th class="col-md-1 width-5">
+                  <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1" />
+                  <label for="styled-checkbox-1"> </label>
+                </th> -->
+                <th class="col-md-1 width-10">UCID</th>
+                <th class="col-md-1 width-15">First Name</th>
+                <th class="col-md-1 width-15">Last Name</th>
+                <th class="col-md-1 width-15">Email</th>
+                <th class="col-md-1 width-10">Passport No.</th>
+                <th class="col-md-1 width-10">Date of Birth</th>
+                <th class="col-md-2 width-10">DS160/DS260 No.</th>
+                <th class="col-md-2 width-10">Appointment Date</th>
+                <th class="col-md-1 width-5">No Show</th>
+                <th class="col-md-1 width-5"></th>
+              </tr>
+            </thead>
+            <!-- | tableFilter: form.value -->
+            <tbody>
+              <tr *ngFor="let list of noShowList| tableFilter: form.value " [ngClass]="{'no-show-bg':( list.appointmentStatus === 'NO_SHOW'),
+                'flag-bg': (list.appointmentType === 'G')}">
+                <!-- <td class="col-md-1 width-5">
+                  <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value1" />
+                  <label for="styled-checkbox-2"> </label>
+                </td> -->
+                <td class="col-md-1 width-10" matTooltip={{list.gssapplicant?.applicantUuid}}>
+                  {{list.gssapplicant?.applicantUuid}}</td>
+                <td class="col-md-1 width-15" matTooltip={{list.gssapplicant?.firstName}}>
+                  {{list.gssapplicant?.firstName}}</td>
+                <td class="col-md-1 width-15" matTooltip={{list.gssapplicant?.lastName}}>{{list.gssapplicant?.lastName}}
+                </td>
+                <td class="col-md-1 width-15" matTooltip={{list.application?.emailAddr}}>{{list.application?.emailAddr}}
+                </td>
+                <td class="col-md-1 width-10" matTooltip={{list.application?.pptNum}}>{{list.application?.pptNum}}</td>
+                <td class="col-md-1 width-10">
+                  {{list.gssapplicant?.dateOfBirth| date : "MM/dd/yyyy"}}</td>
+                <td class="col-md-2 width-10" matTooltip={{list.visa?.ceacBarcodeNum}}>{{list.visa?.ceacBarcodeNum}}
+                </td>
+                <td class="col-md-2 width-10">
+                  {{list.appointmentDt | date : "MM/dd/yyyy"}}</td>
+                <td class="col-md-1 width-5">
+                  <div class="toggle-button">
+                    <input type="checkbox" [checked]="list.appointmentStatus != 'NO_SHOW'"
+                      [disabled]="list.appointmentStatus === 'NO_SHOW'"
+                      (change)="onchangeAppointmentStatus($event, list)" />
+                  </div>
+                </td>
+                <td class="col-md-1 width-5">
+                  <div class="table-two-icon-new">
+                    <a class="icons-list icon-view-icon float-align-left table-icons"></a>
+                    <a class="icons-list icon-flag-icon float-align-right table-icons flag-color" data-toggle="modal"
+                      data-target="#myModal" (click)="flagClick(list)"></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <div class="row custom-row">
+          <div class="Pager2" aria-label="pagination example">
+            <div class="page-out-of">
+              <div class="page-text">Page</div>
+              <div class="form-group">
+                <select class="my-select selectpicker" data-container="body">
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </div>
+              <div class="of-text">of 10</div>
+            </div>
+            <ul class="pagination pagination-circle justify-content-center">
+            
+              <li class="page-item disabled">
+                <a class="page-link" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" aria-label="Next">
+                  <span class="icon-left-arrow"></span>
+                </a>
+              </li>
+
+           
+              <li class="page-item active"><a class="page-link">1</a></li>
+              <li class="page-item"><a class="page-link">2</a></li>
+              <li class="page-item"><a class="page-link">3</a></li>
+              <li class="page-item">
+                <a class="page-link page-blank-age">...</a>
+              </li>
+              <li class="page-item"><a class="page-link">10</a></li>
+
+            
+              <li class="page-item">
+                <a class="page-link" aria-label="Next">
+                  <span class="icon-right-arrow-1"></span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+  <div class="modal-dialog appointment-management-modal-outer" role="document">
+    <div class="modal-content otp-inner-block">
+      <div class="modal-header display">
+        <button #closeButton type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true" class="icon-modal-close"></span></button>
+      </div>
+      <div class="modal-body">
+        <div class="flag-modal">
+          <div class="inner-modal-flag-top">
+            <div class=" wizard-sub-mian-font">Do you want to flag this applicant?</div>
+            <div class="gird-outer">
+              <div class="inner-modal-flag--two-grid">
+                <button class="add-step-button " [ngClass]="{'gray-button-color': clickedClass}"
+                  click="UpdateFlagObj()">221G</button>
+
+                <!-- <a href="" class="add-step-button light-gray-button">FOLLOW UP</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="row appointment-management-button">
+
+            <div class="inner-modal-flag--two-grid">
+              <button class="add-step-button blue-button" type="submit"
+                (click)="flagConfirmation($event)">CONFIRM</button>
+
+              <a href="" class="add-step-button">CANCEL</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="modal" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+  <div class="modal-dialog appointment-management-modal-outer" role="document">
+    <div class="modal-content otp-inner-block">
+      <div class="modal-header display">
+        <button #closeButtonUpload type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true" class="icon-modal-close"></span></button>
+      </div>
+      <div class="modal-body">
+        <div class="flag-modal">
+          <div class="inner-modal-flag-top">
+            <div class=" wizard-sub-mian-font text-align-left">Upload Data</div>
+            <div class="row">
+              <div class="col-md-12">
+
+                <div class="equine-modal-drad-drop">
+                  <div class="equine-file-icon">
+                    <img src="../../../../../../../assets/svg/choose-file-icon.svg" alt="" />
+                  </div>
+                  <div class="equine-drag-block">
+                    <input type="file" #inpfile (change)="selectFile($event)" style="display: inline-block;">
+
+                  </div>
+
+
+                </div>
+
+                <div class="row upload-name-list upload">Supported Files: xlsx</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="appointment-management-upload">
+              <a href="javascript:;" class="add-step-button blue-button " (click)="uploadCsv()">CONTINUE</a>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
